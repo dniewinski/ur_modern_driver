@@ -24,6 +24,7 @@
   <arg name="base_frame" default="$(arg prefix)base" />
   <arg name="tool_frame" default="$(arg prefix)tool0_controller" />
   <arg name="shutdown_on_disconnect" default="true" />
+  <arg name="reverse_port" default="50001" />
 
   <!-- require_activation defines when the service /ur_driver/robot_enable needs to be called. -->
   <arg name="require_activation" default="Never" /> <!-- Never, Always, OnStartup -->
@@ -54,5 +55,6 @@
     <param name="tool_frame" type="str" value="$(arg tool_frame)"/>
     <param name="require_activation" type="str" value="$(arg require_activation)" />
     <param name="shutdown_on_disconnect" type="bool" value="$(arg shutdown_on_disconnect)"/>
+    <param name="reverse_port" type="int" value="$(arg reverse_port)"/>
   </node>
 </launch>
